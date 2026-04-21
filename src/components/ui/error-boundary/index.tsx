@@ -56,7 +56,7 @@ type ErrorBoundaryProps = {
 /*FIXME: Currently having issue with ssr; infinite loading, temporariry wrapped with client only wrapper to avoid ssr */
 const ErrorBoundary = (props: ErrorBoundaryProps) => {
   return (
-    <ErrorBoundaryWrapper>
+    <div>
       <SolidErrorBoundary
         fallback={(error, reset) => {
           console.error(error)
@@ -69,7 +69,7 @@ const ErrorBoundary = (props: ErrorBoundaryProps) => {
       >
         {props.children}
       </SolidErrorBoundary>
-    </ErrorBoundaryWrapper>
+    </div>
   );
 };
 
